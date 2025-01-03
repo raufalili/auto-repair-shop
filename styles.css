@@ -15,8 +15,6 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
     padding: 20px;
 }
 .left-section {
@@ -176,8 +174,7 @@ body {
     }
 
     .button-container button {
-        font-size: 1rem; /* Adjust button font size */
-        max-width: 50%;
+        max-width: 90%;
     }
 
     .button-image {
@@ -581,7 +578,7 @@ footer a:hover {
         font-size: 14px;
     }
     .buttons button {
-        font-size: 14px;
+        font-size: 18px;
         padding: 8px 15px;
     }
     .social-icons a {
