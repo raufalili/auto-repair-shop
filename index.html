@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Springtown Union Auto Repair</title>
+    <link rel="icon"  href="images/logo.JPG" type="image/webph">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <ul class="nav-bar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#auto-repair">Auto Repair</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="container" id="home">
+        <div class="left-section">
+            <img src="images/logo.JPG" alt="Auto Repair Shop Logo">
+            <div class="info">
+                <p>4700 First St,</p>
+                <p>Livermore, CA 94551</p></br>
+                <p>Mon-Fri: 8 AM - 6 PM</p>
+                <p>Sat: 9 AM - 4 PM</p>
+                <p>Sun: Closed</p>
+                <button onclick="window.location.href='tel:+19256670203'">(925) 667-0203</button>
+                <button onclick="window.location.href='mailto:contact@autorepair.com'">Send Email</button>
+            </div>
+        </div>
+    </div>
+    <div class="content-section">
+        <h1 id="about">Welcome to Springtown Union Auto Repair</h1>
+        <p>We provide quality auto repair services to keep you on the road.</p>
+        <div class="buttons">
+            <div class="button-container">
+                <img src="images/schedule.png" alt="Icon for scheduling service" class="button-image">
+                <button onclick="window.location.href='#contact'" aria-label="Schedule Service">Schedule Service</button>
+            </div>
+            <div class="button-container">
+                <img src="images/directions.png" alt="Icon for location and directions" class="button-image">
+                <button onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=7933+Roswell+Rd,+Atlanta,+GA', '_blank')" aria-label="Get Directions">Get Directions</button>
+            </div>
+            <div class="button-container">
+                <img src="images/auto-repair.png" alt="Icon for auto repair services" class="button-image">
+                <button onclick="window.location.href='#auto-repair'" aria-label="Learn about Auto Repair">Auto Repair</button>
+            </div>
+        </div>
+    </div>
+    <section class="services-section" id="auto-repair">
+        <h2>Common Services</h2>
+        <div class="services-container" id="servicesContainer">
+            <div class="service-card">
+                <img src="images/car-engine.png" alt="Service 1">
+                <h3>Check Engine Light</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/oil-filter.png" alt="Service 2">
+                <h3>Oil & Filter Change</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/disc-brake.png" alt="Service 3">
+                <h3>Brakes</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/air-conditioner.png" alt="Service 4">
+                <h3>AC Services</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/car-battery.png" alt="Service 5">
+                <h3>Battery Replacement</h3>
+            </div>
+            <div class="service-card">
+                <img src="images/tools.png" alt="Service 6">
+                <h3>Tune Ups</h3>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <div class="info-container" id="location">
+        <h2>Location</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.813351703426!2d-121.74426162411987!3d37.700582272004056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fe722ad4d7a43%3A0x3b14bcf8d6dadfe7!2s4700%20First%20St%2C%20Livermore%2C%20CA%2094551!5e0!3m2!1sen!2sus!4v1735533216513!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    
+        <p class="location">4700 First ST Livermore, CA 94551</p>
+        <h2>Hours</h2>
+        <p class="business-hours">
+          Monday - Friday: 9:00 AM - 6:00 PM <br>
+          Saturday: 10:00 AM - 4:00 PM <br>
+          Sunday: Closed
+        </p>
+    </div>
+    <div class="contact-us" id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name">
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <textarea id="message" name="message" rows="6" placeholder="Your message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <footer>
+        <p>Follow Us:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61570699139012" target="_blank" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+        <div style="text-align: center; padding-top: 20px; font-size: 0.9em;">
+            <p>&copy; 2024 Springtown Union Auto Repair. All rights reserved.</p>
+          </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
