@@ -27,52 +27,6 @@ document.querySelectorAll('.nav-bar a').forEach(link => {
     });
 });
 
-// Contact us section
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    let isValid = true;
-
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    const errors = document.querySelectorAll('.error');
-    errors.forEach(error => error.textContent = '');
-
-    if (firstName.trim() === '') {
-        isValid = false;
-        alert('First name is required.');
-    }
-
-    if (lastName.trim() === '') {
-        isValid = false;
-        alert('Last name is required.');
-    }
-
-    if (phone.trim() === '') {
-        isValid = false;
-        alert('Phone number is required.');
-    }
-
-    if (email.trim() === '' || !/^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-        isValid = false;
-        alert('Please enter a valid email address.');
-    }
-
-    if (message.trim() === '') {
-        isValid = false;
-        alert('Message cannot be empty.');
-    }
-
-    if (isValid) {
-        alert('Your message has been sent successfully!');
-        document.getElementById('contactForm').reset();
-    }
-});
-
 // Auto repair services
 document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.getElementById("prevBtn");
@@ -128,3 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function showImageModal(imageSrc) {
+  document.getElementById("modalImage").src = imageSrc;
+  document.getElementById("imageModal").style.display = "flex";
+}
+function closeImageModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
