@@ -90,3 +90,42 @@ function showImageModal(imageSrc) {
 function closeImageModal() {
   document.getElementById("imageModal").style.display = "none";
 }
+
+// get reviews from google maps
+const apiKey = 'AIzaSyBAXAUWzUuCzyvq3lh7APjS-nRRJ8S_K4Y';
+    const placeId = 'ChIJWyLqWIvnj4AReKlLSIV7sgE';
+
+    async function fetchReviews() {
+        try {
+            const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`);
+            const data = await response.json();
+
+            if (data.result && data.result.reviews) {
+                displayReviews(data.result.reviews);
+            } else {
+                document.getElementById('reviews-container').innerText = 'No reviews available';
+            }
+        } catch (error) {
+            console.error('Error fetching reviews:', error);
+        }
+    }
+
+    function displayReviews(reviews) {
+        const container = document.getElementById('reviews-container');
+        container.innerHTML = '';
+
+        reviews.slice(0, 4).forEach(review => {
+            const reviewCard = document.createElement('div');
+            reviewCard.className = 'review-card';
+
+            reviewCard.innerHTML = `
+                <div class="review-author">${review.author_name}</div>
+                <div class="review-rating">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</div>
+                <div class="review-text">${review.text}</div>
+            `;
+
+            container.appendChild(reviewCard);
+        });
+    }
+
+    fetchReviews();
