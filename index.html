@@ -84,7 +84,6 @@
           <img src="images/oil service coupon.jpeg" alt="Oil Change Discount" />
           <h3>Oil Change Discount</h3>
           <p>Synthetic blend only for <strong>$29.99</strong> (excludes sales tax, disposal fee)</p>
-          <p>Use Code: OIL10</p>
         </div>
         <div
           class="coupon"
@@ -92,18 +91,20 @@
           <img src="images/brake coupon.jpeg" alt="Brake Service Discount" />
           <h3>Brake Service Discount</h3>
           <p><strong>$64.99</strong> per axle, plus parts!</p>
-          <p>Use Code: BRAKE15</p>
         </div>
       </div>
     </section>
-
-    <h2>Google Reviews</h2>
-    <div class="reviews-container" id="reviews-container"></div>
-
     <!-- Image Modal -->
     <div id="imageModal" class="modal" onclick="closeImageModal()">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="modalImage" />
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" />
+    </div>
+
+    <div class="reviews-container" id="reviews">
+        <h2>Read our reviews!</h2>
+        <div data-instance-id="72TM518SrebLI7Wgr7Qh">
+            <script src="https://reviews.beaver.codes/widget/web-google-reviews.js" async="true"></script>
+        </div>
     </div>
 
     <div class="info-container" id="location">
@@ -128,6 +129,7 @@
             <p>&copy; 2024 Springtown Union Auto Repair. All rights reserved.</p>
           </div>
     </footer>
+
     <script src="index.js"></script>
 </body>
 </html>
